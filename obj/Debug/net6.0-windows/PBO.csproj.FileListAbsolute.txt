@@ -1,0 +1,15 @@
+D:\Sem 2\PBO_FIX_FP\PBO_Fix_Bismillah\bin\Debug\net6.0-windows\PBO.exe
+D:\Sem 2\PBO_FIX_FP\PBO_Fix_Bismillah\bin\Debug\net6.0-windows\PBO.deps.json
+D:\Sem 2\PBO_FIX_FP\PBO_Fix_Bismillah\bin\Debug\net6.0-windows\PBO.runtimeconfig.json
+D:\Sem 2\PBO_FIX_FP\PBO_Fix_Bismillah\bin\Debug\net6.0-windows\PBO.dll
+D:\Sem 2\PBO_FIX_FP\PBO_Fix_Bismillah\bin\Debug\net6.0-windows\PBO.pdb
+D:\Sem 2\PBO_FIX_FP\PBO_Fix_Bismillah\obj\Debug\net6.0-windows\PBO.GeneratedMSBuildEditorConfig.editorconfig
+D:\Sem 2\PBO_FIX_FP\PBO_Fix_Bismillah\obj\Debug\net6.0-windows\PBO.AssemblyInfoInputs.cache
+D:\Sem 2\PBO_FIX_FP\PBO_Fix_Bismillah\obj\Debug\net6.0-windows\PBO.AssemblyInfo.cs
+D:\Sem 2\PBO_FIX_FP\PBO_Fix_Bismillah\obj\Debug\net6.0-windows\PBO.csproj.CoreCompileInputs.cache
+D:\Sem 2\PBO_FIX_FP\PBO_Fix_Bismillah\obj\Debug\net6.0-windows\PBO.sourcelink.json
+D:\Sem 2\PBO_FIX_FP\PBO_Fix_Bismillah\obj\Debug\net6.0-windows\PBO.dll
+D:\Sem 2\PBO_FIX_FP\PBO_Fix_Bismillah\obj\Debug\net6.0-windows\refint\PBO.dll
+D:\Sem 2\PBO_FIX_FP\PBO_Fix_Bismillah\obj\Debug\net6.0-windows\PBO.pdb
+D:\Sem 2\PBO_FIX_FP\PBO_Fix_Bismillah\obj\Debug\net6.0-windows\PBO.genruntimeconfig.cache
+D:\Sem 2\PBO_FIX_FP\PBO_Fix_Bismillah\obj\Debug\net6.0-windows\ref\PBO.dll
