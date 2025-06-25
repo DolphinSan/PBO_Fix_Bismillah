@@ -13,7 +13,7 @@ namespace TicTacToeGame
         private SmallBoard[,] boards = new SmallBoard[3, 3];
         private string[,] bigBoardWinners = new string[3, 3]; // buat ngetrack nanti pemenang nya siapa
         private int activeRow = -1;
-        private int activeCol = -1; 
+        private int activeCol = -1;
         private bool gameOver = false;
 
         public TicTacToeForm()
@@ -99,7 +99,7 @@ namespace TicTacToeGame
 
             SmallBoard clickedBoard = null;
             int boardRow = -1, boardCol = -1;
-            
+
             for (int i = 0; i < 3; i++)
             {
                 for (int j = 0; j < 3; j++)
@@ -173,6 +173,19 @@ namespace TicTacToeGame
 
             isPlayerX = !isPlayerX;
             UpdateStatusLabel();
+        }
+
+        private bool IsSmallBoardFull(SmallBoard board)
+        {
+            for (int row = 0; row < 3; row++)
+            {
+                for (int col = 0; col < 3; col++)
+                {
+                    if (board.Cells[row, col].Text == "")
+                        return false;
+                }
+            }
+            return true;
         }
 
         private void UpdateStatusLabel()
@@ -262,8 +275,8 @@ namespace TicTacToeGame
         {
             for (int row = 0; row < 3; row++)
             {
-                if (bigBoardWinners[row, 0] != "" && 
-                    bigBoardWinners[row, 0] == bigBoardWinners[row, 1] && 
+                if (bigBoardWinners[row, 0] != "" &&
+                    bigBoardWinners[row, 0] == bigBoardWinners[row, 1] &&
                     bigBoardWinners[row, 1] == bigBoardWinners[row, 2])
                 {
                     return bigBoardWinners[row, 0];
@@ -272,23 +285,23 @@ namespace TicTacToeGame
 
             for (int col = 0; col < 3; col++)
             {
-                if (bigBoardWinners[0, col] != "" && 
-                    bigBoardWinners[0, col] == bigBoardWinners[1, col] && 
+                if (bigBoardWinners[0, col] != "" &&
+                    bigBoardWinners[0, col] == bigBoardWinners[1, col] &&
                     bigBoardWinners[1, col] == bigBoardWinners[2, col])
                 {
                     return bigBoardWinners[0, col];
                 }
             }
 
-            if (bigBoardWinners[0, 0] != "" && 
-                bigBoardWinners[0, 0] == bigBoardWinners[1, 1] && 
+            if (bigBoardWinners[0, 0] != "" &&
+                bigBoardWinners[0, 0] == bigBoardWinners[1, 1] &&
                 bigBoardWinners[1, 1] == bigBoardWinners[2, 2])
             {
                 return bigBoardWinners[0, 0];
             }
 
-            if (bigBoardWinners[0, 2] != "" && 
-                bigBoardWinners[0, 2] == bigBoardWinners[1, 1] && 
+            if (bigBoardWinners[0, 2] != "" &&
+                bigBoardWinners[0, 2] == bigBoardWinners[1, 1] &&
                 bigBoardWinners[1, 1] == bigBoardWinners[2, 0])
             {
                 return bigBoardWinners[0, 2];
@@ -354,92 +367,6 @@ namespace TicTacToeGame
             statusLabel.Text = "Player X Turn - Click any square to start";
             statusLabel.ForeColor = Color.Black;
             UpdateBoardHighlights();
-        }
-    }
-
-    public class SmallBoard
-    {
-        public Button[,] Cells = new Button[3, 3];
-        public Panel panel = new Panel();
-        public int BoardRow { get; set; }
-        public int BoardCol { get; set; }
-
-        public SmallBoard(int CellSize, EventHandler onClick)
-        {
-            panel.Size = new Size(CellSize * 3, CellSize * 3);
-            panel.BorderStyle = BorderStyle.FixedSingle;
-
-            for (int row = 0; row < 3; row++)
-            {
-                for (int col = 0; col < 3; col++)
-                {
-                    Button button = new Button
-                    {
-                        Size = new Size(CellSize, CellSize),
-                        Location = new Point(col * CellSize, row * CellSize),
-                        Font = new Font("Arial", 10, FontStyle.Bold),
-                        BackColor = Color.White,
-                        Text = "",
-                        Tag = new Tuple<int, int>(row, col)
-                    };
-                    button.Click += onClick;
-                    panel.Controls.Add(button);
-                    Cells[row, col] = button;
-                }
-            }
-        }
-
-        public void Disable(bool enabled)
-        {
-            foreach (Button b in Cells)
-            {
-                if (b.Text == "")
-                    b.Enabled = enabled;
-            }
-        }
-
-        public void SetWinner(string winner)
-        {
-            panel.BackColor = winner == "X" ? Color.LightCoral : Color.LightBlue;
-            
-            // disable tombol di cell ini
-            foreach (Button b in Cells)
-            {
-                b.Enabled = false;
-            }
-
-            Label winnerLabel = new Label
-            {
-                Text = winner,
-                Font = new Font("Arial", 36, FontStyle.Bold),
-                ForeColor = winner == "X" ? Color.Red : Color.Blue,
-                BackColor = Color.Transparent,
-                Size = panel.Size,
-                Location = new Point(0, 0),
-                TextAlign = ContentAlignment.MiddleCenter
-            };
-            panel.Controls.Add(winnerLabel);
-            winnerLabel.BringToFront();
-        }
-
-        public void Reset()
-        {
-            for (int i = panel.Controls.Count - 1; i >= 0; i--)
-            {
-                if (panel.Controls[i] is Label)
-                {
-                    panel.Controls.RemoveAt(i);
-                }
-            }
-
-            foreach (Button button in Cells)
-            {
-                button.Text = "";
-                button.BackColor = Color.White;
-                button.Enabled = true;
-            }
-
-            panel.BackColor = Color.White;
         }
     }
 }
