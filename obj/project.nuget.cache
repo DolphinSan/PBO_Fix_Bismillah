@@ -1,13 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bgD3ivHDdtE=",
+  "dgSpecHash": "CSWn89DTtlo=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Muhammad Krisna\\Documents\\PBO RPL 24\\FP tictactoe\\PBO_Fix_Bismillah\\PBO.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\Muhammad Krisna\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.36\\microsoft.windowsdesktop.app.ref.6.0.36.nupkg.sha512",
-    "C:\\Users\\Muhammad Krisna\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.36\\microsoft.netcore.app.ref.6.0.36.nupkg.sha512",
-    "C:\\Users\\Muhammad Krisna\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.36\\microsoft.aspnetcore.app.ref.6.0.36.nupkg.sha512",
-    "C:\\Users\\Muhammad Krisna\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.36\\microsoft.netcore.app.host.win-x64.6.0.36.nupkg.sha512"
-  ],
+  "projectFilePath": "D:\\Sem 2\\PBO_Temp\\PBO_Fix_Bismillah\\PBO.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }
