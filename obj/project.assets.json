@@ -8,24 +8,31 @@
     "net6.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Yoza\\.nuget\\packages\\": {}
+    "C:\\Users\\Muhammad Krisna\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Sem 2\\PBO_FIX_FP\\PBO_Fix_Bismillah\\PBO.csproj",
+      "projectUniqueName": "C:\\Users\\Muhammad Krisna\\Documents\\PBO RPL 24\\FP tictactoe\\PBO_Fix_Bismillah\\PBO.csproj",
       "projectName": "PBO",
-      "projectPath": "D:\\Sem 2\\PBO_FIX_FP\\PBO_Fix_Bismillah\\PBO.csproj",
-      "packagesPath": "C:\\Users\\Yoza\\.nuget\\packages\\",
-      "outputPath": "D:\\Sem 2\\PBO_FIX_FP\\PBO_Fix_Bismillah\\obj\\",
+      "projectPath": "C:\\Users\\Muhammad Krisna\\Documents\\PBO RPL 24\\FP tictactoe\\PBO_Fix_Bismillah\\PBO.csproj",
+      "packagesPath": "C:\\Users\\Muhammad Krisna\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Muhammad Krisna\\Documents\\PBO RPL 24\\FP tictactoe\\PBO_Fix_Bismillah\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Yoza\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Muhammad Krisna\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0-windows"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -60,6 +67,24 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[6.0.36, 6.0.36]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[6.0.36, 6.0.36]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[6.0.36, 6.0.36]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[6.0.36, 6.0.36]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
@@ -68,7 +93,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }

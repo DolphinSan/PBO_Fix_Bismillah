@@ -13,3 +13,18 @@ D:\Sem 2\PBO_FIX_FP\PBO_Fix_Bismillah\obj\Debug\net6.0-windows\refint\PBO.dll
 D:\Sem 2\PBO_FIX_FP\PBO_Fix_Bismillah\obj\Debug\net6.0-windows\PBO.pdb
 D:\Sem 2\PBO_FIX_FP\PBO_Fix_Bismillah\obj\Debug\net6.0-windows\PBO.genruntimeconfig.cache
 D:\Sem 2\PBO_FIX_FP\PBO_Fix_Bismillah\obj\Debug\net6.0-windows\ref\PBO.dll
+C:\Users\Muhammad Krisna\Documents\PBO RPL 24\FP tictactoe\PBO_Fix_Bismillah\bin\Debug\net6.0-windows\PBO.exe
+C:\Users\Muhammad Krisna\Documents\PBO RPL 24\FP tictactoe\PBO_Fix_Bismillah\bin\Debug\net6.0-windows\PBO.deps.json
+C:\Users\Muhammad Krisna\Documents\PBO RPL 24\FP tictactoe\PBO_Fix_Bismillah\bin\Debug\net6.0-windows\PBO.runtimeconfig.json
+C:\Users\Muhammad Krisna\Documents\PBO RPL 24\FP tictactoe\PBO_Fix_Bismillah\bin\Debug\net6.0-windows\PBO.dll
+C:\Users\Muhammad Krisna\Documents\PBO RPL 24\FP tictactoe\PBO_Fix_Bismillah\bin\Debug\net6.0-windows\PBO.pdb
+C:\Users\Muhammad Krisna\Documents\PBO RPL 24\FP tictactoe\PBO_Fix_Bismillah\obj\Debug\net6.0-windows\PBO.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Muhammad Krisna\Documents\PBO RPL 24\FP tictactoe\PBO_Fix_Bismillah\obj\Debug\net6.0-windows\PBO.AssemblyInfoInputs.cache
+C:\Users\Muhammad Krisna\Documents\PBO RPL 24\FP tictactoe\PBO_Fix_Bismillah\obj\Debug\net6.0-windows\PBO.AssemblyInfo.cs
+C:\Users\Muhammad Krisna\Documents\PBO RPL 24\FP tictactoe\PBO_Fix_Bismillah\obj\Debug\net6.0-windows\PBO.csproj.CoreCompileInputs.cache
+C:\Users\Muhammad Krisna\Documents\PBO RPL 24\FP tictactoe\PBO_Fix_Bismillah\obj\Debug\net6.0-windows\PBO.sourcelink.json
+C:\Users\Muhammad Krisna\Documents\PBO RPL 24\FP tictactoe\PBO_Fix_Bismillah\obj\Debug\net6.0-windows\PBO.dll
+C:\Users\Muhammad Krisna\Documents\PBO RPL 24\FP tictactoe\PBO_Fix_Bismillah\obj\Debug\net6.0-windows\refint\PBO.dll
+C:\Users\Muhammad Krisna\Documents\PBO RPL 24\FP tictactoe\PBO_Fix_Bismillah\obj\Debug\net6.0-windows\PBO.pdb
+C:\Users\Muhammad Krisna\Documents\PBO RPL 24\FP tictactoe\PBO_Fix_Bismillah\obj\Debug\net6.0-windows\PBO.genruntimeconfig.cache
+C:\Users\Muhammad Krisna\Documents\PBO RPL 24\FP tictactoe\PBO_Fix_Bismillah\obj\Debug\net6.0-windows\ref\PBO.dll

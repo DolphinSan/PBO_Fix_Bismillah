@@ -1,5 +1,7 @@
 using System;
 using System.Drawing;
+using System.Runtime.CompilerServices;
+using System.Security.Cryptography.X509Certificates;
 using System.Windows.Forms;
 
 namespace TicTacToeGame
@@ -12,6 +14,7 @@ namespace TicTacToeGame
         private Label statusLabel;
         private Button resetButton;
 
+        private SmallBoard[,] boards = new SmallBoard[3, 3];
         public TicTacToeForm()
         {
             InitializeForm();
@@ -58,65 +61,38 @@ namespace TicTacToeGame
 
         private void CreateGameBoard()
         {
-            int buttonSize = 80;
-            int startX = 80;
-            int startY = 80;
-            int gap = 5;
+            int cellSize = 40;
+            int spacing = 10;
+            int startX = 20;
+            int startY = 60;
 
             for (int row = 0; row < 3; row++)
             {
                 for (int col = 0; col < 3; col++)
                 {
-                    buttons[row, col] = new Button
-                    {
-                        Size = new Size(buttonSize, buttonSize),
-                        Location = new Point(
-                            startX + col * (buttonSize + gap),
-                            startY + row * (buttonSize + gap)
-                        ),
-                        Font = new Font("Arial", 24, FontStyle.Bold),
-                        BackColor = Color.White,
-                        UseVisualStyleBackColor = false,
-                        FlatStyle = FlatStyle.Flat,
-                        Text = "",
-                        Tag = new Point(row, col)
-                    };
-                    
-                    buttons[row, col].FlatAppearance.BorderSize = 2;
-                    buttons[row, col].FlatAppearance.BorderColor = Color.Black;
-                    buttons[row, col].Click += OnCellClick;
-                    this.Controls.Add(buttons[row, col]);
+                    SmallBoard board = new SmallBoard(cellSize, OnCellClick);
+                    boards[row, col] = board;
+
+                    int posX = startX + col * (cellSize * 3 + spacing);
+                    int posY = startY + row * (cellSize * 3 + spacing);
+
+                    board.panel.Location = new Point(posX, posY);
+                    this.Controls.Add(board.panel);
                 }
             }
         }
 
         private void OnCellClick(object sender, EventArgs e)
         {
-            Button button = sender as Button;
-            if (button == null || button.Text != "")
-                return;
+            Button btn = sender as Button;
+            if (btn == null || btn.Text != "") return;
 
-            button.Text = isPlayerX ? "X" : "O";
-            button.ForeColor = isPlayerX ? Color.Red : Color.Blue;
-            button.BackColor = Color.LightGray;
-            
+            btn.Text = isPlayerX ? "X" : "O";
+            btn.ForeColor = isPlayerX ? Color.Red : Color.Blue;
+            btn.Enabled = false;
+            btn.BackColor = Color.LightGray;
+
             moveCount++;
-
-            if (CheckForWinner())
-            {
-                string winner = isPlayerX ? "X" : "O";
-                statusLabel.Text = $"PLayer {winner} Win";
-                statusLabel.ForeColor = Color.Green;
-                DisableAllButtons();
-                return;
-            }
-
-            if (moveCount == 9)
-            {
-                statusLabel.Text = "Draw";
-                statusLabel.ForeColor = Color.Orange;
-                return;
-            }
 
             isPlayerX = !isPlayerX;
             statusLabel.Text = $"Player {(isPlayerX ? "X" : "O")} Turn";
@@ -191,6 +167,44 @@ namespace TicTacToeGame
             moveCount = 0;
             statusLabel.Text = "Player X Turn";
             statusLabel.ForeColor = Color.Black;
+        }
+    }
+    public class SmallBoard
+    {
+        public Button[,] Cells = new Button[3, 3];
+        public Panel panel = new Panel();
+
+        public SmallBoard(int CellSize, EventHandler onClick)
+        {
+            panel.Size = new Size(CellSize * 3, CellSize * 3);
+            panel.BorderStyle = BorderStyle.FixedSingle;
+
+            for (int row = 0; row < 3; row++)
+            {
+                for (int col = 0; col < 3; col++)
+                {
+                    Button button = new Button
+                    {
+                        Size = new Size(CellSize, CellSize),
+                        Location = new Point(col * CellSize, row * CellSize),
+                        Font = new Font("Arial", 10, FontStyle.Bold),
+                        BackColor = Color.White,
+                        Text = "",
+                        Tag = new Tuple<int, int>(row, col)
+                    };
+                    button.Click += onClick;
+                    panel.Controls.Add(button);
+                    Cells[row, col] = button;
+                }
+            }
+        }
+        public void Matikan(bool enabled)
+        {
+            foreach (Button b in Cells)
+            {
+                if (b.Text == "")
+                    b.Enabled = enabled;
+            }
         }
     }
 }
